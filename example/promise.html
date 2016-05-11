@@ -20,10 +20,10 @@
 
     var funcLayer = new L.TileLayer.Functional(function (view) {
       var deferred = $.Deferred();
-      var url = 'http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{y}/{x}.jpg'
+      var url = 'http://otile{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg'
         .replace('{z}', view.zoom)
-        .replace('{x}', view.tile.row)
-        .replace('{y}', view.tile.column)
+        .replace('{y}', view.tile.row)
+        .replace('{x}', view.tile.column)
         .replace('{s}', view.subdomain);
         
       setTimeout(function() {
